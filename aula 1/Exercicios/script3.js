@@ -1,7 +1,12 @@
-let num1 = parseFloat(prompt('Digite o primeiro número'))
-let num2 = parseFloat(prompt('Digite o segundo número'))
-let num3 = parseFloat(prompt('Digite o terceiro número'))
-let num4 = parseFloat(prompt('Digite o quarto número'))
+function calcular() {
+    const num1 = parseInt(document.getElementById('n1').value)
+    const num2 = parseInt(document.getElementById('n2').value)
+    const num3 = parseInt(document.getElementById('n3').value)
+    const num4 = parseInt(document.getElementById('n4').value)
+    const result = document.getElementById('resultado')
+    
+    let max = Math.max(num1,num2,num3,num4)
+    let min = Math.min(num1,num2,num3,num4)
 
-alert(`O Maior número é o ${Math.max(num1,num2,num3,num4)} 
-e o Menor é o ${Math.min(num1,num2,num3,num4)}`)
+    result.innerText = `O Maior número é o ${max} e o Menor é o ${min}`
+}
